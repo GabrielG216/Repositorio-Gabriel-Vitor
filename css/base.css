@@ -1,0 +1,141 @@
+/* CORES E TIPOGRAFIA: altere estas variáveis para personalizar todo o site. */
+:root {
+  color-scheme:dark;
+  --bg:#101012;
+  --surface:#171719;
+  --card:#1c1c1f;
+  --text:#f4f3f1;
+  --muted:#acacb5;
+  --border:#303034;
+  --accent:#ff545e;
+  --accent-solid:#c92335;
+  --header:rgba(16,16,18,.94);
+  --font:'Poppins',sans-serif;
+}
+
+:root[data-theme="light"] {
+  color-scheme:light;
+  --bg:#faf8f5;
+  --surface:#f0eeeb;
+  --card:#fff;
+  --text:#202024;
+  --muted:#61616a;
+  --border:#d8d5d2;
+  --accent:#b71d31;
+  --accent-solid:#b71d31;
+  --header:rgba(250,248,245,.95);
+}
+
+* {
+  box-sizing:border-box;
+}
+
+html {
+  scroll-behavior:smooth;
+  scroll-padding-top:100px;
+}
+
+body {
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--font);
+  font-size:16px;
+  line-height:1.75;
+}
+
+a {
+  color:inherit;
+  text-decoration:none;
+}
+
+button {
+  font:inherit;
+}
+
+button,a {
+  -webkit-tap-highlight-color:transparent;
+}
+
+button {
+  cursor:pointer;
+}
+
+a:focus-visible,button:focus-visible {
+  outline:3px solid var(--accent);
+  outline-offset:6px;
+}
+
+h1,h2,h3,p {
+  margin:0;
+}
+
+h1,h2,h3 {
+  line-height:1.15;
+}
+
+h2 {
+  font-size:clamp(2rem,4vw,3.5rem);
+  font-weight:600;
+  letter-spacing:-.045em;
+}
+
+h3 {
+  font-size:1.2rem;
+  font-weight:600;
+}
+
+p {
+  color:var(--muted);
+}
+
+em {
+  font-style:normal;
+  color:var(--accent);
+}
+
+ul {
+  padding:0;
+  list-style:none;
+}
+
+img {
+  display:block;
+  max-width:100%;
+}
+
+::selection {
+  background:var(--accent-solid);
+  color:#fff;
+}
+
+[hidden] {
+  display:none!important;
+}
+
+.skip-link {
+  position:fixed;
+  top:-100px;
+  left:1rem;
+  padding:1rem;
+  background:var(--text);
+  color:var(--bg);
+  z-index:100;
+}
+
+.skip-link:focus {
+  top:1rem;
+}
+
+@media(prefers-reduced-motion:reduce) {
+  html {
+    scroll-behavior:auto;
+  }
+
+  *,*::before,*::after {
+    animation:none!important;
+    transition:none!important;
+  }
+
+}
+
